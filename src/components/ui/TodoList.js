@@ -4,6 +4,7 @@ import Header from './Header';
 import Footer from './Footer';
 import FilteredList from './FilteredList';
 import {applyFilter, search, FILTER_ACTIVE} from '../../services/filter';
+import ExtraOne from '../ui/ExtraOne';
 
 export default function TodoList(props) {
     const {list, filter, mode, query} = props.data;
@@ -19,6 +20,8 @@ export default function TodoList(props) {
                     <FilteredList {...{items, changeStatus}}/>
                     <Footer {...{activeItemCount, filter, changeFilter, mode, changeMode}}/>
                     <Info {...{mode}}/>
+                    <ExtraOne />
+                    
                 </div>
             </div>
         </div>
